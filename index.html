@@ -77,7 +77,7 @@
         }
         .absolute {
             position: absolute;
-            top: 150px;
+            top: 170px;
             left: 0px;
         }
         
@@ -85,6 +85,14 @@
             position: relative;
             border: 1px solid #00000000;
             height: 200px;
+        }
+
+        .text-button {
+        background: none;
+        border: none;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        cursor: pointer;
         }
     </style>
 </head>
@@ -141,10 +149,11 @@
     <div id="popup3" class="popup" style="background-image: url('背景.png');">
         <p><h3 style="color:white">LINKS</h3>
 			<h4 style="color:white">bone1018 / 倫敦鐵喬 </h4>
-			<a href="https://www.instagram.com/bone.1018/"target="blank"><h4 style="color:white">。Instagram</h4></a>
+            <a href="https://www.instagram.com/bone.1018/"target="blank"><h4 style="color:white">。Instagram</h4></a></button>
 			<a href="https://discordapp.com/users/850309889195900929"target="blank"><h4 style="color:white">。DISCORD</h4></a>
 			<a href="https://hackmd.io/@bone1018/bone1018"target="blank"><h4 style="color:white">。HACKMD</h4></a>
-			<a href="https://www.hyjdevelop.com/"target="blank"><h4 style="color:white">。HYJdevolop </h4></a></p>
+			<a href="https://www.hyjdevelop.com/"target="blank"><h4 style="color:white">。HYJdevolop </h4></a>
+            <a href="https://larryeng.hyjdevelop.com/"target="blank"><h4 style="color:white">。鯊魚Y.Y的成長日記 </h4></a></p>
     </div>
 
 	<script>
@@ -152,15 +161,14 @@
 		const closePopupBtns = document.querySelectorAll('.closePopupBtn');
 		const popups = document.querySelectorAll('.popup');
 		const overlay = document.getElementById('overlay');
-
+	
 		popupBtns.forEach((btn, index) => {
 			btn.addEventListener('click', () => {
 				popups[index].style.display = 'block';
 				overlay.style.display = 'block';
 			});
 		});
-	
-		closePopupBtns.forEach((btn, index) => {
+			closePopupBtns.forEach((btn, index) => {
 			btn.addEventListener('click', () => {
 				popups[index].style.display = 'none';
 				overlay.style.display = 'none';
