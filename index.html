@@ -1,86 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><bone.1018></title>
-    <body text background="whole.png"></body>
+	<body text background="whole.png"></body>
+	<div class="btn-group-vertical"></div>
     <style>
         body {
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
+            background-attachment: fixed; 
+            background-position: center; 
             background-size: cover;
+        }
+
+		.fixed-text {
+            position: absolute;
+            top: 200px;
+            left: 300px; 
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .float-right{
+            float:right;
+            margin-right:20px;
+        }
+
+        .popupBtn {
+            position: fixed;
+            bottom: 30px;
+            padding: 250px 20px;
+            background-color: #007bff00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #popup1Btn { left: 290px; }
+        #popup2Btn { left: 390px; }
+        #popup3Btn { left: 470px; }
+        #popup4Btn { left: 580px; }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 620px;
+            height: 600px;
+            color: white;
+        }
+
+        /* 遮罩 */
+        #overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .absolute {
+            position: absolute;
+            top: 150px;
+            left: 0px;
+        }
+        
+        .relative {
+            position: relative;
+            border: 1px solid #00000000;
+            height: 200px;
         }
     </style>
 </head>
-<div style="text-align: center;">
-    <p><body>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1 style="color:white"> 倫敦鐵喬 </h1>
-    </body>
-        <div class="wrap">
-            <br>
-            <br>
-            <h2 style="color:white">MAYBE BE GOOD AT...?</h2>
-            <br>
-            <h3 style="color:white">。司儀 / 主持
-            <h3 style="color:white">。美編 / 動漫 / 插圖
-            <h3 style="color:white">。C + +
-            </h3>
-            <br>
-            <br>
-            <h2 style="color:white">WORKS</h2>
-            <img src="魅魔.png"width="180"heigh="120"/>
-            <img src="作者.png"width="180"heigh="120"/>
-            <img src="茶會2.png"width="180"heigh="120"/>
-            </h4>
-            <br>
-            <br>
-            <h2 style="color:white">GET TO CHAT WITH ME</h2>
-            <h3 style="color:white">bone1018 / 倫敦鐵喬</h3>
-            <a href="https://www.instagram.com/bone.1018/"target="blank"><h3 style="color:white">。Instagram</h3></a>
-            <a href="https://discordapp.com/users/850309889195900929"target="blank"><h3 style="color:white">。Discord</h3></a>
-            <a href="https://www.facebook.com/profile.php?id=61550047394021&locale=zh_TW"target="blank"><h4 style="color:white">。FB</h4></a>
-            <br>
-            <br>
-            <h2 style="color:white">SONETHING ABOUT</h2>
-            <br>
-            <h3 style="color:white">。ENFP-T
-                <br><h3 style="color:white">。<s> 台南州立台南農業學校 </s> 高二牲
-                <br><h3 style="color:white">。喜歡辦活動 (有活動歡迎找我!!!)
-                <br><h3 style="color:white">。只會打APEX不會打APCS
-                </h3>
-            <br>
-            <br>
-            <h2 style="color:white">EXPERENCE</h2>
-            <br><h3 style="color:white">。第35屆向陽美展_主展 & 策展 & 主持
-            <br><h3 style="color:white">。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
-            <br><h3 style="color:white">。南大附中_第二屆_資訊研究社_社長
-            <br><h3 style="color:white">。南十校聯合茶會_公關
-            <br><h3 style="color:white">。程式獵人_常駐工作人員
-            <br><h3 style="color:white">。南七校聯合迎新_活動組 & 隊輔
-            <br><h3 style="color:white">。SCIST_S5_美宣
-            <br><h3 style="color:white">。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組
-            </h3>
-            <br>
-            <br>
-            <h2 style="color:white">links</h2>
-            <a href="https://www.hyjdevelop.com/"target="blank"><h3 style="color:white">。HYJ </h3></a>
-            <p style="color:white"> 2024 / 07 / 21</P>
-            <br>
-            <br>
-            <br>
-</body>
+<div class="relative">
+    <p><img src="me.png"width="500"heigh="500" class="absolute" alt="Absolute Image"></p>
+</div>
+
+<div class="fixed-text">
+    <h1 style="color:white">Hello, world</h1>
+    <h1 style="color:white">早安 我是倫敦鐵喬</h2>
+</div>
+<div class="wrap">
+
+<body>
+    <button id="popup1Btn" class="popupBtn">ABOUTME</button>
+    <button id="popup2Btn" class="popupBtn">WORKS</button>
+    <button id="popup3Btn" class="popupBtn">EXPENSIVE</button>
+    <button id="popup4Btn" class="popupBtn">LINKS</button>
+
+    <div id="overlay"></div>
+    <div id="popup1" class="popup" style="background-image: url('橋.jpg');">
+        <p><h3 style="color:white">ABOUT ME</h3>
+			<h4 style="color:white">。ENFP-T
+				<br><h4 style="color:white">。台南州立台南農業學校 高二牲
+				<br><h4 style="color:white">。喜歡辦活動 (有活動歡迎找我!!!)
+				<br><h4 style="color:white">。只會打APEX不會打APCS
+			</h4></p>
+    </div>
+
+    <div id="popup2" class="popup" style="background-image: url('橋.jpg');">
+        <p><h3 style="color:white">WORKS</h3>
+			<img src="魅魔.png"width="180"heigh="120"/>
+			<img src="作者.png"width="180"heigh="120"/>
+			<img src="茶會2.png"width="180"heigh="120"/></p>
+    </div>
+
+    <div id="popup3" class="popup" style="background-image: url('橋.jpg');">
+		<p>
+		<h3 style="color:white">EXPERENCE</h3>
+			<br><h4 style="color:white">。第35屆向陽美展_主展 & 策展 & 主持
+			<br><h4 style="color:white">。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
+			<br><h4 style="color:white">。南大附中_第二屆_資訊研究社_社長
+			<br><h4 style="color:white">。南十校聯合茶會_公關
+			<br><h4 style="color:white">。程式獵人_常駐工作人員
+			<br><h4 style="color:white">。南七校聯合迎新_活動組 & 隊輔
+			<br><h4 style="color:white">。SCIST_S5_美宣
+			<br><h4 style="color:white">。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組</h4>
+		</p>
+    </div>
+    <div id="popup3" class="popup" style="background-image: url('橋.jpg');">
+        <p><h3 style="color:white">LINKS</h3>
+			<h4 style="color:white">bone1018 / 倫敦鐵喬 </h4>
+			<a href="https://www.instagram.com/bone.1018/"target="blank"><h4 style="color:white">。Instagram</h4></a>
+			<a href="https://discordapp.com/users/850309889195900929"target="blank"><h4 style="color:white">。DISCORD</h4></a>
+			<a href="https://hackmd.io/@bone1018/bone1018"target="blank"><h4 style="color:white">。HACKMD</h4></a>
+			<a href="https://www.hyjdevelop.com/"target="blank"><h4 style="color:white">。HYJdevolop </h4></a></p>
+    </div>
+
+	<script>
+		const popupBtns = document.querySelectorAll('.popupBtn');
+		const closePopupBtns = document.querySelectorAll('.closePopupBtn');
+		const popups = document.querySelectorAll('.popup');
+		const overlay = document.getElementById('overlay');
+	
+		popupBtns.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				popups[index].style.display = 'block';
+				overlay.style.display = 'block';
+			});
+		});
+	
+		closePopupBtns.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				popups[index].style.display = 'none';
+				overlay.style.display = 'none';
+			});
+		});
+	
+		overlay.addEventListener('click', () => {
+			popups.forEach(popup => popup.style.display = 'none');
+			overlay.style.display = 'none';
+		});
+	</script>
 </body>
 </html>
