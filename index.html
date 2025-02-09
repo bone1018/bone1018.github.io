@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +65,6 @@
             color: white;
         }
 
-        /* 遮罩 */
         #overlay {
             display: none;
             position: fixed;
@@ -105,7 +105,7 @@
     <button id="popup4Btn" class="popupBtn">LINKS</button>
 
     <div id="overlay"></div>
-    <div id="popup1" class="popup" style="background-image: url('橋.jpg');">
+    <div id="popup1" class="popup" style="background-image: url('背景.png');">
         <p><h3 style="color:white">ABOUT ME</h3>
 			<h4 style="color:white">。ENFP-T
 				<br><h4 style="color:white">。台南州立台南農業學校 高二牲
@@ -114,14 +114,18 @@
 			</h4></p>
     </div>
 
-    <div id="popup2" class="popup" style="background-image: url('橋.jpg');">
+    <div id="popup2" class="popup" style="background-image: url('背景.png');">
         <p><h3 style="color:white">WORKS</h3>
 			<img src="魅魔.png"width="180"heigh="120"/>
 			<img src="作者.png"width="180"heigh="120"/>
-			<img src="茶會2.png"width="180"heigh="120"/></p>
+			<img src="茶會2.png"width="180"heigh="120"/>
+            <img src="LOGO.png"width="180"heigh="120"/>
+            <img src="寒訓紀念1.png"width="180"heigh="120"/>
+            <img src="程式獵人.png"width="180"heigh="120"/>
+        </p>
     </div>
 
-    <div id="popup3" class="popup" style="background-image: url('橋.jpg');">
+    <div id="popup3" class="popup" style="background-image: url('背景.png');">
 		<p>
 		<h3 style="color:white">EXPERENCE</h3>
 			<br><h4 style="color:white">。第35屆向陽美展_主展 & 策展 & 主持
@@ -134,7 +138,7 @@
 			<br><h4 style="color:white">。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組</h4>
 		</p>
     </div>
-    <div id="popup3" class="popup" style="background-image: url('橋.jpg');">
+    <div id="popup3" class="popup" style="background-image: url('背景.png');">
         <p><h3 style="color:white">LINKS</h3>
 			<h4 style="color:white">bone1018 / 倫敦鐵喬 </h4>
 			<a href="https://www.instagram.com/bone.1018/"target="blank"><h4 style="color:white">。Instagram</h4></a>
@@ -148,7 +152,7 @@
 		const closePopupBtns = document.querySelectorAll('.closePopupBtn');
 		const popups = document.querySelectorAll('.popup');
 		const overlay = document.getElementById('overlay');
-	
+
 		popupBtns.forEach((btn, index) => {
 			btn.addEventListener('click', () => {
 				popups[index].style.display = 'block';
