@@ -16,7 +16,7 @@
         }
 
         .fixed-text {
-            position: absolute; /* 使用絕對定位 */
+            position: absolute;
             top: 200px;
             left: 300px; 
         }
@@ -34,7 +34,6 @@
             margin-right: 20px;
         }
 
-        /* 按鈕位置固定在右邊 */
         .popupBtn {
             position: fixed;
             bottom: 250px;
@@ -50,7 +49,6 @@
         #popup3Btn { left: 470px; }
         #popup4Btn { left: 580px; }
 
-        /* 隱藏彈出視窗 */
         .popup {
             display: none;
             position: fixed;
@@ -63,9 +61,9 @@
             border: 1px solid #ccc;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            width: 650px; /* 設置固定寬度 */
-            height: 650px; /* 設置固定高度 */
-            color: white; /* 根據背景圖片調整文字顏色 */
+            width: 650px;
+            height: 650px;
+            color: white;
         }
 
         .photo-container {
@@ -94,7 +92,6 @@
             }
         }
 
-        /* 遮罩 */
         #overlay {
             display: none;
             position: fixed;
@@ -133,7 +130,7 @@
         }
 
         .hidden-audio {
-            display: none; /* 隱藏音樂控制條 */
+            display: none;
         }
 
     </style>
@@ -204,22 +201,22 @@
     </div>
 
     <script>
-        // 選擇按鈕和彈出視窗元素
+
         const popupBtns = document.querySelectorAll('.popupBtn');
         const closePopupBtns = document.querySelectorAll('.closePopupBtn');
         const popups = document.querySelectorAll('.popup');
         const overlay = document.getElementById('overlay');
-        // 點擊顯示彈出視窗按鈕
+
         popupBtns.forEach((btn, index) => { 
             btn.addEventListener('click', () => {
                 popups[index].style.display = 'block';
                 overlay.style.display = 'block'; }); });
-        // 點擊關閉彈出視窗按鈕
+
             closePopupBtns.forEach((btn, index) => {
                 btn.addEventListener('click', () => {
                     popups[index].style.display = 'none';
                     overlay.style.display = 'none'; }); });
-        // 點擊遮罩區域關閉彈出視窗 
+
         overlay.addEventListener('click', () => {
             popups.forEach(popup => popup.style.display = 'none');
             overlay.style.display = 'none';
