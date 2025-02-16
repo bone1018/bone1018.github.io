@@ -41,6 +41,8 @@
         #popup2Btn { left: 390px; }
         #popup3Btn { left: 470px; }
         #popup4Btn { left: 580px; }
+        #playBtn { left: 100px; top: 600px; }
+        #volumeControl { left: 100px; top: 620px; }
 
         .popup {
             display: none;
@@ -119,11 +121,11 @@
 </head>
 
 <body>
-<div class="photo-container" id="music" autoplay>
+<div class="photo-container">
     <div class="photo-piece"></div>
 </div>
 
-<audio class="hidden-audio">
+<audio id="music">
     <source src="smallgirl.mp3" type="audio/mpeg">
 </audio>
 
@@ -135,10 +137,12 @@
 <div class="wrap">
     <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
     <button id="popup2Btn" class="popupBtn">WORKS</button>
-    
     <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERIENCE</button>
-    
     <button id="popup4Btn" class="popupBtn">LINKS</button>
+
+    <button id="playBtn" class="popupBtn">MUSIC</button>
+
+    <input type="range" id="volumeControl" class="popupBtn" min="0" max="1" step="0.1" value="1">
 
     <div id="overlay"></div>
 
@@ -182,29 +186,38 @@
         const popupBtns = document.querySelectorAll('.popupBtn');
         const popups = document.querySelectorAll('.popup');
         const overlay = document.getElementById('overlay');
+        const playBtn = document.getElementById('playBtn');
+        const audio = document.getElementById('music');
+        const volumeControl = document.getElementById('volumeControl');
 
         popupBtns.forEach((btn, index) => { 
             btn.addEventListener('click', (event) => {
                 if (event.target.id !== 'popup3Btn') {
-                    if (btn.id === 'popup1Btn') {
-                        popups[0].style.display = 'block';
-                    } else if (btn.id === 'popup2Btn') {
-                        popups[1].style.display = 'block';
-                    } else if (btn.id === 'popup4Btn') {
-                        popups[2].style.display = 'block';
-                    }
-                    overlay.style.display = 'block';
+                if (btn.id === 'popup1Btn') {
+                popups[0].style.display = 'block';
+                } else if (btn.id === 'popup2Btn') {
+                popups[1].style.display = 'block';
+                } else if (btn.id === 'popup4Btn') {
+                popups[2].style.display = 'block';
                 }
-            });
-        });
+                overlay.style.display = 'block';
+                }});});
 
         overlay.addEventListener('click', () => {
         popups.forEach(popup => popup.style.display = 'none');
-        overlay.style.display = 'none'; });
-        
-        document.addEventListener('DOMContentLoaded', (event) => {
-        var audio = document.getElementById('music');
-        audio.play(); });
+        overlay.style.display = 'none'; }); 
+
+        playBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            if (audio.paused) {
+            audio.play();
+            } else {
+            audio.pause();}});
+
+        volumeControl.addEventListener('input', (event) => {
+        audio.volume = event.target.value;});
+
         </script>
         </body>
         </html>
