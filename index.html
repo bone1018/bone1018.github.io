@@ -22,11 +22,12 @@
         }
 
         .fixed-text {
-            position: absolute;
+            position: absolute; /* 使用絕對定位 */
             top: 200px;
             left: 300px;
         }
 
+        /* 按鈕位置固定在右邊 */
         .popupBtn {
             position: fixed;
             bottom: 250px;
@@ -42,6 +43,7 @@
         #popup3Btn { left: 470px; }
         #popup4Btn { left: 580px; }
 
+        /* 隱藏彈出視窗 */
         .popup {
             display: none;
             position: fixed;
@@ -77,11 +79,9 @@
 
         @keyframes rotate {
             from {
-                transform: rotate(0deg);
-            }
+                transform: rotate(0deg);}
             to {
-                transform: rotate(360deg);
-            }
+                transform: rotate(360deg);}
         }
 
         #overlay {
@@ -114,6 +114,11 @@
             font-size: 16px;
             cursor: pointer;
         }
+
+        .link-button {
+        font-weight: 300;
+        font-size: 20px;
+        }
     </style>
 </head>
 
@@ -122,7 +127,7 @@
     <div class="photo-piece"></div>
 </div>
 
-<audio class="hidden-audio" >
+<audio class="hidden-audio">
     <source src="smallgirl.mp3" type="audio/mpeg">
 </audio>
 
@@ -134,19 +139,27 @@
 <div class="wrap">
     <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
     <button id="popup2Btn" class="popupBtn">WORKS</button>
-    <button id="popup3Btn" class="popupBtn">EXPENSIVE</button>
+    <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERENCE</button>
     <button id="popup4Btn" class="popupBtn">LINKS</button>
 
     <div id="overlay"></div>
 
-    <div id="popup1" class="popup" style="background-image: url('背景.png');">
+    <div id="popup1" class="popup" style="background-image:url('背景.png');">
         <h3>ABOUT ME</h3>
-        <h4>。ENFP-T
-        <br><br>。台南州立台南農業學校 高二牲
-        <br><br>。喜歡辦活動 (有活動歡迎找我!!!)</h4>
+        <h4 style="font-weight: 400;">。ENFP-T
+        <br><br>。南大附中 高二
+        <br><br>。第35屆向陽美展_主展 & 策展 & 主持
+        <br><br>。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
+        <br><br>。南大附中_資訊研究社_第二屆社長
+        <br><br>。南十校聯合茶會_公關美宣組
+        <br><br>。程式獵人_工作人員
+        <br><br>。南七校聯合迎新_活動組 & 隊輔
+        <br><br>。SCIST_S5行政組_美宣
+        <br><br>。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組
+        </h4>
     </div>
 
-    <div id="popup2" class="popup" style="background-image: url('背景.png');">
+    <div id="popup2" class="popup" style="background-image:url('背景.png');">
         <h3>WORKS</h3>
         <img src="魅魔.png" width="200" height="200"/>
         <img src="作者.png" width="200" height="200"/>
@@ -156,28 +169,14 @@
         <img src="程式獵人.png" width="200" height="200"/>
     </div>
 
-    <div id="popup3" class="popup" style="background-image: url('背景.png');">
-        <h3 style="color:white">EXPERENCE</h3>
-            <h4>。第35屆向陽美展_主展 & 策展 & 主持
-            <br><br>。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
-            <br><br>。南大附中_第二屆_資訊研究社_社長
-            <br><br>。南十校聯合茶會_公關
-            <br><br>。程式獵人_常駐工作人員
-            <br><br>。南七校聯合迎新_活動組 & 隊輔
-            <br><br>。SCIST_S5_美宣
-            <br><br>。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組
-        </h4>
-    </div>
-
-    <div id="popup4" class="popup" style="background-image: url('背景.png');">
+    <div id="popup4" class="popup" style="background-image:url('背景.png');">
         <h3>LINKS</h3>
-        <h4>bone1018 / 倫敦鐵喬</h4>
-            <a href="https://www.instagram.com/bone.1018/" target="blank"><h4 style="color:white">。Instagram</h4></a>
-            <a href="https://discordapp.com/users/850309889195900929" target="blank"><h4 style="color:white">。DISCORD</h4></a>
-            <a href="https://hackmd.io/@bone1018/bone1018" target="blank"><h4 style="color:white">。HACKMD</h4></a>
-            <a href="https://www.hyjdevelop.com/" target="blank"><h4 style="color:white">。HYJdevolop</h4></a>
-            <a href="https://ceo.hyjdevelop.com/" target="blank"><h4 style="color:white">。HYJ's website</h4></a>
-            <a href="https://larryeng.hyjdevelop.com/" target="blank"><h4 style="color:white">。鯊魚Y.Y的成長日記</h4></a>
+        <h5>bone1018 / 倫敦鐵喬</h5>
+        <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/','_blank')">。Instagram</button>
+        <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
+        <br><br><button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJdevolop</button>
+        <br><br><button class="text-button link-button" onclick="window.open('https://ceo.hyjdevelop.com/', '_blank')">。HYJ's website</button>
+        <br><br><button class="text-button link-button" onclick="window.open('https://larryeng.hyjdevelop.com/', '_blank')">。鯊魚Y.Y的成長日記</button>
     </div>
 
     <script>
