@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>bone.1018</title>
-	<div class="btn-group-vertical"></div>
-    	<link rel="icon" href="me1.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bone.1018</title>
+    <div class="btn-group-vertical"></div>
+    <link rel="icon" href="me.png" type="image/x-icon">
     <style>
         body, html {
             height: 100%;
@@ -76,10 +76,8 @@
         }
 
         @keyframes rotate {
-            from {
-                transform: rotate(0deg);}
-            to {
-                transform: rotate(360deg);}
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         #overlay {
@@ -114,8 +112,8 @@
         }
 
         .link-button {
-        font-weight: 300;
-        font-size: 20px;
+            font-weight: 300;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -137,7 +135,9 @@
 <div class="wrap">
     <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
     <button id="popup2Btn" class="popupBtn">WORKS</button>
-    <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERENCE</button>
+    
+    <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERIENCE</button>
+    
     <button id="popup4Btn" class="popupBtn">LINKS</button>
 
     <div id="overlay"></div>
@@ -169,10 +169,11 @@
 
     <div id="popup4" class="popup" style="background-image:url('背景.png');">
         <h3>LINKS</h3>
-        <h5>bone1018 / 倫敦鐵喬</h5>
+        <h4>contact me - bone1018 / 倫敦鐵喬</h4>
         <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/','_blank')">。Instagram</button>
         <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
-        <br><br><button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJdevolop</button>
+        <h4>Other website</h4>
+        <button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJdevolop</button>
         <br><br><button class="text-button link-button" onclick="window.open('https://ceo.hyjdevelop.com/', '_blank')">。HYJ's website</button>
         <br><br><button class="text-button link-button" onclick="window.open('https://larryeng.hyjdevelop.com/', '_blank')">。鯊魚Y.Y的成長日記</button>
     </div>
@@ -183,18 +184,27 @@
         const overlay = document.getElementById('overlay');
 
         popupBtns.forEach((btn, index) => { 
-        btn.addEventListener('click', () => {
-        popups[index].style.display = 'block';
-        overlay.style.display = 'block'; }); });
+            btn.addEventListener('click', (event) => {
+                if (event.target.id !== 'popup3Btn') {
+                    if (btn.id === 'popup1Btn') {
+                        popups[0].style.display = 'block';
+                    } else if (btn.id === 'popup2Btn') {
+                        popups[1].style.display = 'block';
+                    } else if (btn.id === 'popup4Btn') {
+                        popups[2].style.display = 'block';
+                    }
+                    overlay.style.display = 'block';
+                }
+            });
+        });
 
         overlay.addEventListener('click', () => {
         popups.forEach(popup => popup.style.display = 'none');
-        overlay.style.display = 'none';});
-
+        overlay.style.display = 'none'; });
+        
         document.addEventListener('DOMContentLoaded', (event) => {
         var audio = document.getElementById('music');
-        audio.play();
-        });
-    </script>
-</body>
-</html>
+        audio.play(); });
+        </script>
+        </body>
+        </html>
