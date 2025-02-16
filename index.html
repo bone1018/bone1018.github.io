@@ -138,7 +138,7 @@
 <body>
 
 <div class="photo-container">
-    <div class="photo-piece"></div>
+<div class="photo-piece"></div>
 </div>
 
 <audio class="hidden-audio" autoplay>
@@ -161,7 +161,6 @@
         <p><h3 style="color:white">ABOUT ME</h3>
             <h4 style="color:white">。ENFP-T
                 <br><h4 style="color:white">。台南州立台南農業學校 高二牲
-                <br><h4 style="color:white">。喜歡辦活動 (有活動歡迎找我!!!)
             </h4></p>
     </div>
 
@@ -181,23 +180,24 @@
         <h3 style="color:white">EXPERENCE</h3>
             <br><h4 style="color:white">。第35屆向陽美展_主展 & 策展 & 主持
             <br><h4 style="color:white">。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
-            <br><h4 style="color:white">。南大附中_第二屆_資訊研究社_社長
-            <br><h4 style="color:white">。南十校聯合茶會_公關
-            <br><h4 style="color:white">。程式獵人_常駐工作人員
+            <br><h4 style="color:white">。南大附中_資訊研究社_第二屆社長
+            <br><h4 style="color:white">。南十校聯合茶會_公關美宣組組長
+            <br><h4 style="color:white">。程式獵人工作人員
             <br><h4 style="color:white">。南七校聯合迎新_活動組 & 隊輔
-            <br><h4 style="color:white">。SCIST_S5_美宣
+            <br><h4 style="color:white">。SCIST_S5行政組_美宣
             <br><h4 style="color:white">。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組</h4>
         </p>
     </div>
 
     <div id="popup4" class="popup" style="background-image: url('背景.png');">
         <p><h3 style="color:white">LINKS</h3></p>
-            <h4 style="color:white">bone1018 / 倫敦鐵喬</h4>
-            <a href="https://www.instagram.com/bone.1018/" target="blank"><h4 style="color:white">。Instagram</h4></a>
-            <a href="https://discordapp.com/users/850309889195900929" target="blank"><h4 style="color:white">。DISCORD</h4></a>
-            <a href="https://hackmd.io/@bone1018/bone1018" target="blank"><h4 style="color:white">。HACKMD</h4></a>
-            <a href="https://www.hyjdevelop.com/" target="blank"><h4 style="color:white">。HYJdevolop</h4></a>
-            <a href="https://larryeng.hyjdevelop.com/" target="blank"><h4 style="color:white">。鯊魚Y.Y的成長日記</h4></a>
+        <h4 style="color:white">bone1018 / 倫敦鐵喬</h4>
+	<h5 style="color:white">本網頁網址由HYJdevolop站主贊助</h5>
+        <a href="https://www.instagram.com/bone.1018/" target="blank"><h4 style="color:white">。Instagram</h4></a>
+        <a href="https://discordapp.com/users/850309889195900929" target="blank"><h4 style="color:white">。DISCORD</h4></a>
+        <a href="https://hackmd.io/@bone1018/bone1018" target="blank"><h4 style="color:white">。HACKMD</h4></a>
+        <a href="https://www.hyjdevelop.com/" target="blank"><h4 style="color:white">。HYJdevolop</h4></a>
+        <a href="https://larryeng.hyjdevelop.com/" target="blank"><h4 style="color:white">。鯊魚Y.Y的成長日記</h4></a>
     </div>
 
     <script>
@@ -212,15 +212,17 @@
                 popups[index].style.display = 'block';
                 overlay.style.display = 'block'; }); });
 
-            closePopupBtns.forEach((btn, index) => {
-                btn.addEventListener('click', () => {
-                    popups[index].style.display = 'none';
-                    overlay.style.display = 'none'; }); });
+        closePopupBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+        popups[index].style.display = 'none';
+        overlay.style.display = 'none';
+	});
+	});
 
         overlay.addEventListener('click', () => {
-            popups.forEach(popup => popup.style.display = 'none');
-            overlay.style.display = 'none';
-            });
+        popups.forEach(popup => popup.style.display = 'none');
+        overlay.style.display = 'none';
+        });
     </script>
 </body>
 </body>
