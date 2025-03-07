@@ -208,15 +208,7 @@
         overlay.style.display = 'none'; }); 
 
         playBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-
-            if (audio.paused) {
-            audio.play();
-            } else {
-            audio.pause();}});
-
-        volumeControl.addEventListener('input', (event) => {
-        audio.volume = event.target.value;});
+        event.stopPropagation();
 
         </script>
         </body>
