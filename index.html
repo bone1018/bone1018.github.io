@@ -22,11 +22,12 @@
         }
 
         .fixed-text {
-            position: absolute;
+            position: absolute; /* 使用絕對定位 */
             top: 200px;
             left: 300px;
         }
 
+        /* 按鈕位置固定在右邊 */
         .popupBtn {
             position: fixed;
             bottom: 250px;
@@ -42,8 +43,8 @@
         #popup3Btn { left: 470px; }
         #popup4Btn { left: 580px; }
         #playBtn { left: 650px; }
-        #volumeControl { left: 100px; top: 620px; }
 
+        /* 隱藏彈出視窗 */
         .popup {
             display: none;
             position: fixed;
@@ -119,7 +120,6 @@
         }
     </style>
 </head>
-
 <body>
 <div class="photo-container">
     <div class="photo-piece"></div>
@@ -139,10 +139,7 @@
     <button id="popup2Btn" class="popupBtn">WORKS</button>
     <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERIENCE</button>
     <button id="popup4Btn" class="popupBtn">LINKS</button>
-
     <button id="playBtn" class="popupBtn">MUSIC</button>
-
-    <input type="range" id="volumeControl" class="popupBtn" min="0" max="1" step="0.1" value="1">
 
     <div id="overlay"></div>
 
@@ -181,32 +178,60 @@
         <br><br><button class="text-button link-button" onclick="window.open('https://ceo.hyjdevelop.com/', '_blank')">。HYJ's website</button>
         <br><br><button class="text-button link-button" onclick="window.open('https://larryeng.hyjdevelop.com/', '_blank')">。鯊魚Y.Y的成長日記</button>
     </div>
-
     <script>
+        // 選擇按鈕和彈出視窗元素
         const popupBtns = document.querySelectorAll('.popupBtn');
         const popups = document.querySelectorAll('.popup');
         const overlay = document.getElementById('overlay');
         const playBtn = document.getElementById('playBtn');
         const audio = document.getElementById('music');
-        const volumeControl = document.getElementById('volumeControl');
-
-        popupBtns.forEach((btn, index) => { 
+    
+        // 顯示彈出視窗
+        const showPopup = (popup) => {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        };
+    
+        // 隱藏所有彈出視窗
+        const hidePopups = () => {
+            popups.forEach(popup => popup.style.display = 'none');
+            overlay.style.display = 'none';
+        };
+    
+        // 綁定按鈕事件
+        popupBtns.forEach((btn) => {
             btn.addEventListener('click', (event) => {
-                if (event.target.id !== 'popup3Btn') {
-                if (btn.id === 'popup1Btn') {
-                popups[0].style.display = 'block';
-                } else if (btn.id === 'popup2Btn') {
-                popups[1].style.display = 'block';
-                } else if (btn.id === 'popup4Btn') {
-                popups[2].style.display = 'block';
+                event.stopPropagation(); // 防止觸發其他事件
+    
+                // 根據按鈕 ID 顯示對應視窗
+                switch (btn.id) {
+                    case 'popup1Btn':
+                        showPopup(popups[0]);
+                        break;
+                    case 'popup2Btn':
+                        showPopup(popups[1]);
+                        break;
+                    case 'popup4Btn':
+                        showPopup(popups[2]);
+                        break;
+                    default:
+                        break;
                 }
-                overlay.style.display = 'block';
-                }});});
-
-        overlay.addEventListener('click', () => {
-        popups.forEach(popup => popup.style.display = 'none');
-        overlay.style.display = 'none'; }); 
-
+            });
+        });
+    
+        // 點擊遮罩區域隱藏彈出視窗
+        overlay.addEventListener('click', hidePopups);
+    
+        // 播放/暫停音樂
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    
         </script>
         </body>
-        </html>
+        </html>        
