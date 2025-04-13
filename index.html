@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="me1.png" type="image/x-icon">
     <title>bone.1018</title>
-    <div class="btn-group-vertical"></div>
+
     <style>
+        /* 設定背景和字型樣式 */
         body, html {
             height: 100%;
             margin: 0;
@@ -21,30 +22,32 @@
             color: white;
         }
 
+        /* 絕對定位的文字區域 */
         .fixed-text {
-            position: absolute; /* 使用絕對定位 */
+            position: absolute;
             top: 200px;
             left: 300px;
         }
 
-        /* 按鈕位置固定在右邊 */
+        /* 按鈕樣式及固定位置 */
         .popupBtn {
             position: fixed;
             bottom: 250px;
-            padding: 20px 20px;
-            background-color: #007bff00;
+            padding: 20px;
+            background-color: transparent;
             color: white;
             border: none;
             cursor: pointer;
-            margin-right: 10px;
         }
+
+        /* 個別按鈕的位置 */
         #popup1Btn { left: 290px; }
         #popup2Btn { left: 390px; }
         #popup3Btn { left: 470px; }
         #popup4Btn { left: 580px; }
         #playBtn { left: 650px; }
 
-        /* 隱藏彈出視窗 */
+        /* 彈出視窗的隱藏樣式 */
         .popup {
             display: none;
             position: fixed;
@@ -61,6 +64,7 @@
             height: 650px;
         }
 
+        /* 旋轉的相片容器 */
         .photo-container {
             position: relative;
             width: 300px;
@@ -69,6 +73,7 @@
             left: 350px;
         }
 
+        /* 旋轉的相片動畫 */
         .photo-piece {
             width: 100%;
             height: 100%;
@@ -78,11 +83,13 @@
             animation: rotate 60s linear infinite;
         }
 
+        /* 定義旋轉的動畫 */
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
+        /* 遮罩區域樣式 */
         #overlay {
             display: none;
             position: fixed;
@@ -94,18 +101,7 @@
             z-index: 999;
         }
 
-        .absolute {
-            position: absolute;
-            top: 170px;
-            left: 0px;
-        }
-        
-        .relative {
-            position: relative;
-            border: 1px solid #00000000;
-            height: 200px;
-        }
-
+        /* 按鈕文字的樣式 */
         .text-button {
             background: none;
             border: none;
@@ -114,6 +110,7 @@
             cursor: pointer;
         }
 
+        /* 連結按鈕的樣式 */
         .link-button {
             font-weight: 300;
             font-size: 20px;
@@ -121,90 +118,99 @@
     </style>
 </head>
 <body>
-<div class="photo-container">
-    <div class="photo-piece"></div>
-</div>
-
-<audio id="music">
-    <source src="smallgirl.mp3" type="audio/mpeg">
-</audio>
-
-<div class="fixed-text">
-    <h1>Hello, world</h1>
-    <h1>早安 我是倫敦鐵喬</h1>
-</div>
-
-<div class="wrap">
-    <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
-    <button id="popup2Btn" class="popupBtn">WORKS</button>
-    <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERIENCE</button>
-    <button id="popup4Btn" class="popupBtn">LINKS</button>
-    <button id="playBtn" class="popupBtn">MUSIC</button>
-
-    <div id="overlay"></div>
-
-    <div id="popup1" class="popup" style="background-image:url('背景.png');">
-        <h3>ABOUT ME</h3>
-        <h4 style="font-weight: 400;">。ENFP-T
-        <br><br>。南大附中 高二
-        <br><br>。第35屆向陽美展_主展 & 策展 & 主持
-        <br><br>。SCIST_資得其樂_南九校資訊社聯合寒訓_活動組
-        <br><br>。南大附中_資訊研究社_第二屆社長
-        <br><br>。南十校聯合茶會_公關美宣組
-        <br><br>。程式獵人_工作人員
-        <br><br>。南七校聯合迎新_活動組 & 隊輔
-        <br><br>。SCIST_S5行政組_美宣
-        <br><br>。SCIST_資深玩家_南十五校資訊社聯合寒訓_美宣組長 & 活動場務組
-        <br><br>。SITCON 2025 lightning talk
-        </h4>
+    <div class="photo-container">
+        <div class="photo-piece"></div>
     </div>
 
-    <div id="popup2" class="popup" style="background-image:url('背景.png');">
-        <h3>WORKS</h3>
-        <img src="魅魔.png" width="200" height="200"/>
-        <img src="作者.png" width="200" height="200"/>
-        <img src="茶會2.png" width="200" height="200"/>
-        <img src="LOGO.png" width="200" height="200"/>
-        <img src="寒訓紀念1.png" width="200" height="200"/>
-        <img src="程式獵人.png" width="200" height="200"/>
+    <!-- 音樂播放器 -->
+    <audio id="music">
+        <source src="smallgirl.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 固定文字 -->
+    <div class="fixed-text">
+        <h1>倫敦鐵喬</h1>
+        <h2>Everything is the best arrangement</h2>
     </div>
 
-    <div id="popup4" class="popup" style="background-image:url('背景.png');">
-        <h3>LINKS</h3>
-        <h4>contact me - bone1018 / 倫敦鐵喬</h4>
-        <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/','_blank')">。Instagram</button>
-        <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
-        <h4>Other website</h4>
-        <button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJdevolop</button>
-        <br><br><button class="text-button link-button" onclick="window.open('https://ceo.hyjdevelop.com/', '_blank')">。HYJ's website</button>
-        <br><br><button class="text-button link-button" onclick="window.open('https://larryeng.hyjdevelop.com/', '_blank')">。鯊魚Y.Y的成長日記</button>
+    <!-- 按鈕 -->
+    <div class="wrap">
+        <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
+        <button id="popup2Btn" class="popupBtn">WORKS</button>
+        <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018', '_blank')">EXPERIENCE</button>
+        <button id="popup4Btn" class="popupBtn">LINKS</button>
+        <button id="playBtn" class="popupBtn">MUSIC</button>
+
+        <!-- 遮罩 -->
+        <div id="overlay"></div>
+
+        <!-- ABOUT ME -->
+        <div id="popup1" class="popup" style="background-image:url('背景.png');">
+            <h3>ABOUT ME</h3>
+            <h4 style="font-weight: 400;">。ENFP-T
+                <br><br>。南大附中 高二
+                <br><br>。35th向陽美展_主展 & 策展 & 主持
+                <br><br>。SCIST聯合寒訓_資得其樂_活動組
+                <br><br>。南大附中資研社_S2社長
+                <br><br>。南十校聯合茶會_公關美宣組
+                <br><br>。程式獵人_工作人員
+                <br><br>。南七校聯合迎新_活動組 & 隊輔
+                <br><br>。SCIST_S5行政組_美宣
+                <br><br>。SCIST聯合寒訓_資深玩家_美宣組長 & 活動場務組
+                <br><br>。SITCON 2025 lightning talk
+            </h4>
+        </div>
+
+        <!-- WORKS -->
+        <div id="popup2" class="popup" style="background-image:url('背景.png');">
+            <h3>WORKS</h3>
+            <img src="魅魔.png" width="200" height="200"/>
+            <img src="作者.png" width="200" height="200"/>
+            <img src="茶會2.png" width="200" height="200"/>
+            <img src="LOGO.png" width="200" height="200"/>
+            <img src="寒訓紀念1.png" width="200" height="200"/>
+            <img src="程式獵人.png" width="200" height="200"/>
+        </div>
+
+        <!-- LINKS 彈窗 -->
+        <div id="popup4" class="popup" style="background-image:url('背景.png');">
+            <h3>LINKS</h3>
+            <h4>Contact me - bone1018 / 倫敦鐵喬</h4>
+            <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/', '_blank')">。Instagram</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
+            <h4>Other website</h4>
+            <button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJ devolop</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://ceoblog.hyjdevelop.com/', '_blank')">。HYJ's blog</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://sharkyy.netlify.app/', '_blank')">。鯊魚Y.Y的成長日記</button>
+        </div>
     </div>
+
     <script>
-        // 選擇按鈕和彈出視窗元素
+        // 彈出視窗相關邏輯
         const popupBtns = document.querySelectorAll('.popupBtn');
         const popups = document.querySelectorAll('.popup');
         const overlay = document.getElementById('overlay');
         const playBtn = document.getElementById('playBtn');
         const audio = document.getElementById('music');
-    
-        // 顯示彈出視窗
+
+        // 顯示彈窗
         const showPopup = (popup) => {
             popup.style.display = 'block';
             overlay.style.display = 'block';
         };
-    
-        // 隱藏所有彈出視窗
+
+        // 隱藏所有視窗
         const hidePopups = () => {
             popups.forEach(popup => popup.style.display = 'none');
             overlay.style.display = 'none';
         };
-    
-        // 綁定按鈕事件
+
+        // 綁定按鈕
         popupBtns.forEach((btn) => {
             btn.addEventListener('click', (event) => {
                 event.stopPropagation(); // 防止觸發其他事件
-    
-                // 根據按鈕 ID 顯示對應視窗
+
+                // 根據 ID 顯示對應視窗
                 switch (btn.id) {
                     case 'popup1Btn':
                         showPopup(popups[0]);
@@ -220,11 +226,11 @@
                 }
             });
         });
-    
-        // 點擊遮罩區域隱藏彈出視窗
+
+        // 點擊遮罩隱藏視窗
         overlay.addEventListener('click', hidePopups);
-    
-        // 播放/暫停音樂
+
+        // 音樂播放/暫停
         playBtn.addEventListener('click', () => {
             if (audio.paused) {
                 audio.play();
@@ -232,7 +238,6 @@
                 audio.pause();
             }
         });
-    
-        </script>
-        </body>
-        </html>        
+    </script>
+</body>
+</html>
