@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="me.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>bone.1018</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         </div>
 
         <!-- 音樂 -->
-        <audio id="music" autoplay loop>
+        <audio id="music">
             <source src="smallgirl.mp3" type="audio/mpeg">
         </audio>
 
@@ -26,33 +26,31 @@
         </section>
 
         <!-- 按鈕 -->
-        <nav class="button-container">
-            <button id="popup1Btn" class="popupBtn">ABOUT</button>
+        <section class="button-container">
+            <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
             <button id="popup2Btn" class="popupBtn">WORKS</button>
-            <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018/', '_blank')">EXPERIENCE</button>
+            <button id="popup3Btn" class="popupBtn" onclick="window.open('https://hackmd.io/@bone1018/bone1018/https%3A%2F%2Fhackmd.io%2F%40bone1018%2FH1g_qBkTA', '_blank')">EXPERIENCE</button>
             <button id="popup4Btn" class="popupBtn">LINKS</button>
-        </nav>
+        </section>
 
         <!-- 音樂控制 -->
         <div class="music-controls">
             <button id="playPauseBtn" class="round-btn" aria-label="播放/暫停音樂">⏸</button>
             <div class="volume-pill">
-                <span aria-hidden="true">🔊</span>
-                <input type="range" id="volumeSlider" min="0" max="100" value="50" aria-label="音量">
+            <span aria-hidden="true">🔊</span>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50" aria-label="音量">
             </div>
         </div>
+
 
         <!-- 遮罩 -->
         <div id="overlay"></div>
 
-        <!-- ABOUT -->
-        <div id="popup1" class="popup" style="background-image:url('background2.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
-            <h3>ABOUT</h3>
-            <h4>
-                。INTP-T
-                <br><br>。南大附中 普高
-                <br><br>。高雄科技大學 環境與安全衛生工程學系<br><br>
+        <!-- ABOUT ME -->
+        <div id="popup1" class="popup" style="background-image:url('background2.png'); overflow: auto;">
+            <h3>ABOUT ME</h3>
+            <h4 style="font-weight: 400;">。INTP-T
+                <br><br>。NKUST SHE
                 <br><br>。35th向陽美展_主展 & 策展 & 主持
                 <br><br>。SCIST聯合寒訓_資得其樂_活動組
                 <br><br>。南大附中資研社_S2社長
@@ -64,37 +62,31 @@
                 <br><br>。SITCON 2025 lightning talk
                 <br><br>。南四校聯合社課 副召
                 <br><br>。SITCON camp_2026_課程活動組組員
+            </h4>
         </div>
 
         <!-- WORKS -->
         <div id="popup2" class="popup" style="background-image:url('background2.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
             <h3>WORKS</h3>
-            <div class="works-grid">
-                <img src="girl.png" alt="作品">
-                <img src="writer.png" alt="作品">
-                <img src="LOGO.png" alt="作品">
-                <img src="wintertraining.png" alt="作品">
-            </div>
+            <img src="girl.png" width="200" height="200">
+            <img src="writer.png" width="200" height="200"/>
+            <img src="LOGO.png" width="200" height="200"/>
+            <img src="wintertraining.png" width="200" height="200"/>
         </div>
 
         <!-- LINKS -->
         <div id="popup4" class="popup" style="background-image:url('background2.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
             <h3>LINKS</h3>
-            <h4>Contact - bone.1018 / 倫敦鐵喬</h4>
+            <h4>Contact me - bone.1018 / 倫敦鐵喬</h4>
             <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/', '_blank')">。Instagram</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
             <h4>Other website</h4>
             <button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJ devolop</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://ceoblog.hyjdevelop.com/', '_blank')">。HYJ's blog</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://sharkyy.netlify.app/', '_blank')">。鯊魚Y.Y的成長日記</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://hyjblog.hyjdevelop.com/', '_blank')">。HYJ's blog</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://sharkyy.netlify.app/', '_blank')">。鯊魚Y.Y的成長日記</button>
         </div>
     </main>
-
-    <script src="js/scripts.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="scripts.js"></script>
 </body>
 </html>
