@@ -35,31 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Escape') hidePopups();
     });
 
-    // ===== EXPERIENCE:條列文章標題(同一頁面顯示) =====
-    if (typeof getArticles === 'function') {
-        const listEl = document.getElementById('experienceList');
-        const emptyEl = document.getElementById('experienceEmpty');
-        const articles = getArticles().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-
-        if (listEl) {
-            if (articles.length === 0) {
-                emptyEl.style.display = 'block';
-            } else {
-                articles.forEach(article => {
-                    const li = document.createElement('li');
-                    li.className = 'article-card';
-                    li.innerHTML = `
-                        <div class="article-info">
-                            <a href="article.html?id=${encodeURIComponent(article.id)}">${escapeHtml(article.title)}</a>
-                            <span class="article-date">${formatDate(article.date)}</span>
-                        </div>
-                    `;
-                    listEl.appendChild(li);
-                });
-            }
-        }
-    }
-
     // ===== 音樂:自動播放、暫停、音量 =====
     const audio = document.getElementById('music');
     const playPauseBtn = document.getElementById('playPauseBtn');
