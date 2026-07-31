@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    overlay.addEventListener('click', hidePopups);
+    if (overlay) {
+        overlay.addEventListener('click', hidePopups);
+    }
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') hidePopups();
