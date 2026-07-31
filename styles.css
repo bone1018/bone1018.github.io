@@ -1,7 +1,4 @@
-/* ===== 基本設定 ===== */
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 body, html {
     height: 100%;
