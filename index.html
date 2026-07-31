@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="me.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>bone.1018</title>
 </head>
 <body>
@@ -21,29 +21,25 @@
 
         <!-- 固定文字 -->
         <section class="fixed-text">
-            <h1>HELLO</h1>
-            <h1>我是倫敦鐵喬</h1>
+            <h1>倫敦鐵喬</h1>
             <h2>Everything is the best arrangement.</h2>
         </section>
 
         <!-- 按鈕 -->
-        <nav class="button-container">
+        <section class="button-container">
             <button id="popup1Btn" class="popupBtn">ABOUT ME</button>
             <button id="popup2Btn" class="popupBtn">WORKS</button>
-            <a href="articles.html" class="popupBtn link-btn">EXPERIENCE</a>
+            <button id="popup3Btn" class="popupBtn" onclick="window.open('reviews.html', '_blank')">EXPERIENCE</button>
             <button id="popup4Btn" class="popupBtn">LINKS</button>
-            <button id="playBtn" class="popupBtn">MUSIC</button>
-        </nav>
+        </section>
 
         <!-- 遮罩 -->
         <div id="overlay"></div>
 
         <!-- ABOUT ME -->
-        <div id="popup1" class="popup" style="background-image:url('背景.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
+        <div id="popup1" class="popup" style="background-image:url('背景.png'); overflow: auto;">
             <h3>ABOUT ME</h3>
-            <h4>
-                。ENFP-T
+            <h4 style="font-weight: 400;">。ENFP-T
                 <br><br>。南大附中 高二
                 <br><br>。35th向陽美展_主展 & 策展 & 主持
                 <br><br>。SCIST聯合寒訓_資得其樂_活動組
@@ -55,39 +51,33 @@
                 <br><br>。SCIST聯合寒訓_資深玩家_美宣組長 & 活動場務組
                 <br><br>。SITCON 2025 lightning talk
                 <br><br>。南四校聯合社課 副召
+                <br><br>。SITCON　camp 2026 課程活動組 組員
             </h4>
         </div>
 
         <!-- WORKS -->
         <div id="popup2" class="popup" style="background-image:url('背景.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
             <h3>WORKS</h3>
-            <div class="works-grid">
-                <img src="魅魔.png" alt="作品">
-                <img src="作者.png" alt="作品">
-                <img src="LOGO.png" alt="作品">
-                <img src="寒訓紀念1.png" alt="作品">
-                <img src="程式獵人.png" alt="作品">
-            </div>
+            <img src="魅魔.png" width="200" height="200">
+            <img src="作者.png" width="200" height="200"/>
+            <img src="LOGO.png" width="200" height="200"/>
+            <img src="寒訓紀念1.png" width="200" height="200"/>
+            <img src="程式獵人.png" width="200" height="200"/>
         </div>
 
         <!-- LINKS -->
         <div id="popup4" class="popup" style="background-image:url('背景.png');">
-            <button class="closePopupBtn" aria-label="關閉">✕</button>
             <h3>LINKS</h3>
             <h4>Contact me - bone.1018 / 倫敦鐵喬</h4>
             <button class="text-button link-button" onclick="window.open('https://www.instagram.com/bone.1018/', '_blank')">。Instagram</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://discordapp.com/users/850309889195900929', '_blank')">。Discord</button>
             <h4>Other website</h4>
             <button class="text-button link-button" onclick="window.open('https://www.hyjdevelop.com/', '_blank')">。HYJ devolop</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://ceoblog.hyjdevelop.com/', '_blank')">。HYJ's blog</button>
-            <br><br>
-            <button class="text-button link-button" onclick="window.open('https://sharkyy.netlify.app/', '_blank')">。鯊魚Y.Y的成長日記</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://ceoblog.hyjdevelop.com/', '_blank')">。HYJ's blog</button>
+            <br><br><button class="text-button link-button" onclick="window.open('https://sharkyy.netlify.app/', '_blank')">。鯊魚Y.Y的成長日記</button>
         </div>
     </main>
-
-    <script src="js/scripts.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script src="scripts.js"></script>
 </body>
 </html>
