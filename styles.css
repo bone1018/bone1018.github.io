@@ -8,7 +8,7 @@ body, html {
     margin: 0;
     font-size: 18px;
     font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    background-image: url('background1.png');
+    background-image: url('whole.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -87,6 +87,54 @@ main {
 .popupBtn:hover,
 .link-btn:hover {
     background-color: rgba(0, 123, 255, 0.4);
+}
+
+/* ===== 音樂控制 ===== */
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.round-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.round-btn:hover {
+    background-color: rgba(0, 123, 255, 0.4);
+}
+
+.volume-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 123, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 22px;
+    padding: 8px 16px;
+}
+
+.volume-pill span {
+    font-size: 14px;
+}
+
+.volume-pill input[type="range"] {
+    width: 90px;
+    accent-color: white;
+    cursor: pointer;
 }
 
 /* ===== 彈出視窗 ===== */
@@ -354,5 +402,13 @@ main {
 
     .article-form {
         padding: 16px;
+    }
+
+    .music-controls {
+        margin-bottom: 24px;
+    }
+
+    .volume-pill input[type="range"] {
+        width: 70px;
     }
 }
