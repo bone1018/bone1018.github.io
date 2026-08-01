@@ -79,11 +79,14 @@ main {
     text-decoration: none;
     transition: background-color 0.2s ease;
     white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .popupBtn:hover,
 .link-btn:hover {
     background-color: rgba(0, 123, 255, 0.4);
+    transform: translateY(-3px) scale(1.05); /* 微微上浮與放大 */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* 增加動態陰影 */
 }
 
 /* ===== 音樂控制 ===== */
