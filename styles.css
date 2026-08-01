@@ -207,7 +207,7 @@ main {
 
 .text-button:hover,
 .link-button:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .btn {
