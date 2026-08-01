@@ -349,15 +349,6 @@ main {
         max-height: 160px;
     }
 
-    .article-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .article-form {
-        padding: 16px;
-    }
-
     .music-controls {
         margin-bottom: 24px;
     }
