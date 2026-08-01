@@ -210,6 +210,16 @@ main {
     text-decoration: underline;
 }
 
+.article-card .article-info a {
+    color: white;             
+    font-size: 18px;          
+    text-decoration: none;   
+}
+
+.article-card .article-info a:hover {
+    text-decoration: underline;
+}
+
 .btn {
     display: inline-block;
     background-color: rgba(0, 123, 255, 0.5);
