@@ -163,21 +163,6 @@ main {
     color: white;
 }
 
-.popup {
-    opacity: 0;
-    transform: translate(-50%, -45%) scale(0.95);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-
-/* 開啟彈窗時加上 .active class */
-.popup.active {
-    display: block; /* 或配合 JS 控制 opacity */
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto;
-}
-
 .closePopupBtn {
     position: sticky;
     top: 0;
