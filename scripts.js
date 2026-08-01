@@ -77,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
             audio.volume = Number(volumeSlider.value) / 100;
         });
 
+        audio.addEventListener('play', () => photoPiece.classList.remove('paused'));
+        audio.addEventListener('pause', () => photoPiece.classList.add('paused'));
+
         audio.addEventListener('play', updateIcon);
         audio.addEventListener('pause', updateIcon);
     }
