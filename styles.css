@@ -190,8 +190,13 @@ main {
     height: 160px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
+.works-grid img:hover {
+    transform: scale(1.08); /* 圖片微微放大 */
+    filter: brightness(1.1); /* 提升亮度 */
+}
 .text-button,
 .link-button {
     background: none;
