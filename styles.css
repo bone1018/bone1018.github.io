@@ -193,9 +193,6 @@ main {
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.works-grid img:hover {
-    transform: scale(1.08); /* 圖片微微放大 */
-    filter: brightness(1.1); /* 提升亮度 */
 }
 .text-button,
 .link-button {
@@ -211,64 +208,6 @@ main {
 .text-button:hover,
 .link-button:hover {
     text-decoration: underline;
-}
-
-/* ===== 文章頁共用 ===== */
-.article-page main,
-.edit-page main {
-    align-items: stretch;
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.page-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.article-list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.article-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-}
-
-.article-card .article-info a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.article-card .article-info a:hover {
-    text-decoration: underline;
-}
-
-.article-card .article-date {
-    display: block;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 4px;
-}
-
-.article-card .article-actions {
-    display: flex;
-    gap: 8px;
 }
 
 .btn {
