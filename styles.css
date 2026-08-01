@@ -77,7 +77,6 @@ main {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.2s ease;
     white-space: nowrap;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
