@@ -23,7 +23,7 @@ main {
     padding: 20px;
 }
 
-/* ===== 旋轉相片 ===== */
+/* 旋轉相片 */
 .photo-container {
     position: relative;
     width: 260px;
@@ -46,7 +46,7 @@ main {
     to { transform: rotate(360deg); }
 }
 
-/* ===== 固定文字 ===== */
+/* 文字 */
 .fixed-text {
     text-align: center;
     margin: 20px 0;
@@ -58,7 +58,7 @@ main {
     color: white;
 }
 
-/* ===== 按鈕列 ===== */
+/* 按鈕 */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -85,11 +85,11 @@ main {
 .popupBtn:hover,
 .link-btn:hover {
     background-color: rgba(0, 123, 255, 0.4);
-    transform: translateY(-3px) scale(1.05); /* 微微上浮與放大 */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* 增加動態陰影 */
+    transform: translateY(-3px) scale(1.05); /* 上浮與放大 */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* 增加陰影 */
 }
 
-/* ===== 音樂控制 ===== */
+/*  音樂  */
 .music-controls {
     display: flex;
     align-items: center;
@@ -252,58 +252,6 @@ main {
     text-align: center;
     padding: 40px 0;
     color: rgba(255, 255, 255, 0.7);
-}
-
-/* ===== 表單 (新增/編輯文章) ===== */
-.article-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-    padding: 24px;
-}
-
-.article-form label {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.article-form input,
-.article-form textarea {
-    font-family: inherit;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-.article-form textarea {
-    min-height: 260px;
-    resize: vertical;
-}
-
-.article-form input::placeholder,
-.article-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.form-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-.article-content {
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-    padding: 24px;
-    white-space: pre-wrap;
-    line-height: 1.8;
 }
 
 /* ===== 手機版 (寬度 768px 以下) ===== */
